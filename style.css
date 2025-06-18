@@ -13,10 +13,8 @@ div {
     height: 752px;
     display: flex;
     flex-wrap: wrap;
-   
-    
 }
-.prompt {
+button {
     border-radius: 15px;
     padding: 8px;
     color: white;
