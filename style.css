@@ -4,6 +4,7 @@ body {
     justify-content: center;
     margin: 0;
     flex-direction: column;
+    background-color: burlywood;
 }
 div {
     margin: 0;
@@ -11,11 +12,12 @@ div {
 }
 
 .container {
-    width: 752px;
-    height: 752px;
+    width: 640px;
+    height: 640px;
     display: flex;
     flex-wrap: wrap;
     border: 1px solid black;
+    background-color: white;
 }
 button {
     border-radius: 15px;

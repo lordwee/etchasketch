@@ -32,13 +32,16 @@ function changeColor() {
 }
 
 function getNewGrid () {
-    let input = prompt("How many boxes do you want on each side(between 16 and 100)?");
-    while (input < 16 || input > 100) {
-        input = prompt("The number must be between 16 and 100");
-    }
+    let input = prompt("How many boxes do you want on each side(between 16 and 100)?"); 
+    while ( input < 16 || input > 100 ) {
+        if (input === null) {
+            break;
+        } else {
+            input = prompt("The number must be between 16 and 100");
+        }
+    } 
     while (container.firstChild) {
         container.removeChild(container.firstChild);
-        boxes.pop();
     }
     newGrid(input);
 }
