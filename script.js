@@ -2,7 +2,6 @@ const container = document.querySelector(".container");
 const containerWidth = container.offsetWidth - 32;
 const divWidth = containerWidth / 16;
 const divHeigth = containerWidth / 16;
-console.log(divWidth, divHeigth);
 
 for (i = 1; i <= 16 * 16; i++) {
     let i = document.createElement("div")
@@ -16,12 +15,13 @@ const btn = document.querySelector("button");
 btn.addEventListener("click", function () {
     let input = prompt("How many boxes do you want on each side(between 16 and 100)?");
     if (input >= 16 && input <= 100) {
-        console.log("generating boxes");
+        while (container.firstChild) {
+            container.removeChild(container.firstChild);
+        }
+        console.log(input);
     } else {
         do {
-            
             input = prompt("The number must be between 16 and 100!");
-
         } while (input < 16 || input > 100);
     }
 })
