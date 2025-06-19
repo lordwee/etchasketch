@@ -5,7 +5,7 @@ const divHeigth = containerWidth / 16;
 let boxes = [];
 // Default GRID when page opened
 for (i = 1; i <= 16 * 16; i++) {
-    let element = document.createElement("div")
+    let element = document.createElement("div");
     element.style.width = `${divWidth}px`;
     element.style.height = `${divHeigth}px`;
     container.appendChild(element);
@@ -13,11 +13,24 @@ for (i = 1; i <= 16 * 16; i++) {
 }
 changeColor();
 
+function randomColor() {
+    const red = Math.floor(Math.random() * 255);
+    const green = Math.floor(Math.random() * 255);
+    const blue = Math.floor(Math.random() * 255);
+    return `${red}, ${green}, ${blue}`
+    
+}
 function changeColor() {
     boxes.forEach((item) => {
-        item.addEventListener('mouseleave', function () {
-            item.style.backgroundColor = "green";
+        const boxColor = randomColor();
+        let opacity = 0.1;
+        item.addEventListener('mouseenter', function () {
+            item.style.backgroundColor = `rgb(${boxColor}, ${opacity}`; 
+            opacity += 0.1;
         })
+        // item.addEventListener('mouseover', function () {
+        //     opacity += 0.1;
+        // })
     })
 }
 
