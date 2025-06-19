@@ -6,10 +6,6 @@ body {
     flex-direction: column;
     background-color: burlywood;
 }
-div {
-    margin: 0;
-    
-}
 
 .container {
     width: 640px;
