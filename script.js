@@ -28,9 +28,6 @@ function changeColor() {
             item.style.backgroundColor = `rgb(${boxColor}, ${opacity}`; 
             opacity += 0.1;
         })
-        // item.addEventListener('mouseover', function () {
-        //     opacity += 0.1;
-        // })
     })
 }
 
